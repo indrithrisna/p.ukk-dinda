@@ -1,0 +1,34 @@
+/* Pengaturan dasar halaman: font global dan warna latar agar tampilan bersih */
+body{
+  font-family: Arial;
+  background:#f4f6f8;
+}
+
+/* Kartu form terpusat: lebar tetap, jarak dalam, dan sudut membulat */
+form{
+  background:white;
+  padding:20px;
+  width:300px;
+  margin:auto;
+  margin-top:50px;
+  border-radius:10px;
+}
+
+/* Kontrol form penuh lebar: margin vertikal konsisten dan padding nyaman */
+input,select,button{
+  width:100%;
+  margin:5px 0;
+  padding:8px;
+}
+
+/* Tabel data: lebar 80%, dipusatkan, latar putih agar kontras */
+table{
+  width:80%;
+  margin:auto;
+  background:white;
+}
+/* Header tabel: warna biru utama dengan teks putih agar menonjol */
+th{
+  background:#3498db;
+  color:white;
+}

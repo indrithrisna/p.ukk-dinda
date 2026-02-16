@@ -1,0 +1,428 @@
+/* ========================================
+   RENTAL MOBIL - SOFT BLUE THEME
+   ======================================== */
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    min-height: 100vh;
+    color: #263238;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, #42a5f5 0%, #1e88e5 100%);
+    color: white;
+    padding: 15px 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(66, 165, 245, 0.15);
+    max-width: 450px;
+    margin: 100px auto;
+    animation: slideUp 0.5s ease;
+    border: 1px solid #e3f2fd;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #1976d2;
+    font-size: 28px;
+}
+
+.card input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 2px solid #bbdefb;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.card input:focus {
+    outline: none;
+    border-color: #42a5f5;
+    box-shadow: 0 0 0 3px rgba(66, 165, 245, 0.1);
+}
+
+.card button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #42a5f5 0%, #1e88e5 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(66, 165, 245, 0.3);
+}
+
+.card button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(66, 165, 245, 0.4);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(66, 165, 245, 0.1);
+    animation: slideUp 0.5s ease;
+    border: 1px solid #e3f2fd;
+}
+
+table th {
+    background: linear-gradient(135deg, #42a5f5 0%, #1e88e5 100%);
+    color: white;
+    padding: 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #e3f2fd;
+    color: #37474f;
+}
+
+table tr:hover {
+    background: #f5f9fc;
+    transition: all 0.3s ease;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #42a5f5 0%, #1e88e5 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(66, 165, 245, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(66, 165, 245, 0.4);
+}
+
+.btn-edit {
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #29b6f6 0%, #0288d1 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-right: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-edit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(41, 182, 246, 0.3);
+}
+
+.btn-delete {
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #ef5350 0%, #e53935 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-delete:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(239, 83, 80, 0.3);
+}
+
+.btn-cancel {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #90a4ae 0%, #78909c 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-left: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-cancel:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(120, 144, 156, 0.3);
+}
+
+/* Form Card */
+.form-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(66, 165, 245, 0.1);
+    max-width: 700px;
+    animation: slideUp 0.5s ease;
+    border: 1px solid #e3f2fd;
+}
+
+.form-card h3 {
+    color: #1976d2;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #42a5f5;
+}
+
+.form-card label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #455a64;
+    font-size: 14px;
+}
+
+.form-card input, 
+.form-card select, 
+.form-card textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #bbdefb;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #37474f;
+}
+
+.form-card input:focus, 
+.form-card select:focus, 
+.form-card textarea:focus {
+    outline: none;
+    border-color: #42a5f5;
+    box-shadow: 0 0 0 3px rgba(66, 165, 245, 0.1);
+}
+
+.form-card small {
+    color: #78909c;
+    font-size: 12px;
+}
+
+.form-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Stat Cards */
+.stat-card {
+    background: white;
+    color: #1976d2;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(66, 165, 245, 0.15);
+    transition: all 0.3s ease;
+    animation: slideUp 0.5s ease;
+    border: 2px solid #e3f2fd;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(66, 165, 245, 0.25);
+    border-color: #42a5f5;
+}
+
+.stat-card h3 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+    color: #1976d2;
+}
+
+.stat-card p {
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    color: #546e7a;
+}
+
+/* Headings */
+h2, h3 {
+    color: #1976d2;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Lists */
+ul {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(66, 165, 245, 0.1);
+    line-height: 2;
+    border: 1px solid #e3f2fd;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #455a64;
+}
+
+/* Alert Boxes */
+.alert-warning {
+    background: #fff8e1;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+    border-left: 5px solid #ffc107;
+    box-shadow: 0 2px 10px rgba(255, 193, 7, 0.1);
+    color: #f57f17;
+}
+
+.alert-info {
+    background: #e1f5fe;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+    border-left: 5px solid #03a9f4;
+    box-shadow: 0 2px 10px rgba(3, 169, 244, 0.1);
+    color: #01579b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .navbar a {
+        margin: 5px;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    
+    .card, .form-card {
+        padding: 20px;
+        margin: 20px auto;
+    }
+    
+    table {
+        font-size: 12px;
+    }
+    
+    table th, table td {
+        padding: 10px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e3f2fd;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #42a5f5 0%, #1e88e5 100%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+}
